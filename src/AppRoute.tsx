@@ -4,10 +4,8 @@ import { BuscarPokemons } from "./Pages/BuscarPokemons";
 export const AppRoute = () => {
   return(
     <Router>
-      <Routes>
         <Route path="/buscar" element={<BuscarPokemons/>}/>
         <Route path="/buscars" element={<BuscarPokemons/>}/>
-      </Routes>
     </Router>
   )
 }
