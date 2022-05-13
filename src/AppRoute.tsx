@@ -6,6 +6,7 @@ export const AppRoute = () => {
     <Router>
       <Routes>
         <Route path="/buscar" element={<BuscarPokemons/>}/>
+        <Route path="/buscars" element={<BuscarPokemons/>}/>
       </Routes>
     </Router>
   )
