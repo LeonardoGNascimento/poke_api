@@ -5,7 +5,7 @@ export const AppRoute = () => {
   return(
     <HashRouter>
       <Routes>
-        <Route path="/buscar" element={<BuscarPokemons/>}/>
+        <Route path="/" element={<BuscarPokemons/>}/>
       </Routes>
     </HashRouter>
   )
