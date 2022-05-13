@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Button, Col, Form, FormControl, Row } from "react-bootstrap";
-import IReponsePokemon from "../../interface/IResponsePokemon";
+import IReponsePokemon from "./interface/IResponsePokemon";
 import api from "../../services/api";
 import "./style.css";
 
-const Pokemons = () => {
+export const BuscarPokemons = () => {
 
   let [pokemon, setPokemons] = useState<IReponsePokemon>();
   let [buscaPokemon, setBuscaPokemons] = useState<Number>(1);
@@ -16,7 +16,7 @@ const Pokemons = () => {
   const handleSubmit = (e:any) => {
     e.preventDefault();
     let pokemonBusca = e.target.buscaPokemon.value;
-    pokemonBusca = pokemonBusca == ''? '1': pokemonBusca
+    pokemonBusca = pokemonBusca == ''? '1': pokemonBusca.toLowerCase()
     setBuscaPokemons(pokemonBusca)
   }
 
@@ -60,5 +60,3 @@ const Pokemons = () => {
   </>
   )
 }
-
-export default Pokemons;
