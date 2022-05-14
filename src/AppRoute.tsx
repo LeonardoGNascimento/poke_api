@@ -1,12 +1,12 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { BuscarPokemons } from "./Pages/BuscarPokemons";
 
 export const AppRoute = () => {
   return(
-    <HashRouter>
+    <Router>
       <Routes>
         <Route path="/" element={<BuscarPokemons/>}/>
       </Routes>
-    </HashRouter>
+    </Router>
   )
 }
