@@ -1,21 +1,20 @@
-import React from "react"
-import "./style.css";
-import { ICard } from "./interface/ICard"
+import { ICard } from "./interface/ICard";
+import { Container, CardArt, CardBody, CardFooter, CardTitle } from "./style";
 
-export const Card = (pokemon: ICard) => {
-  return(
-    <div id="card" className="d-flex flex-column">
-      <div id="cardTitle" className="align-middle">
-        <h2>{pokemon?.name}</h2>
-      </div>
-      <div id="cardBody">
-          <img id="pokemonArt" src={pokemon?.sprites}/>
-      </div>
-      <div id="cardfooter">
-        <p>Peso: {pokemon?.weight}</p>
-        <p>N°: {pokemon?.id}</p>
-        <p>Tipo: {pokemon?.types}</p>
-      </div>
-    </div>
-  )
-}
+export const Card = ({ name, sprites, weight, id, types }: ICard) => {
+  return (
+    <Container>
+      <CardTitle>
+        <h1>{name}</h1>
+      </CardTitle>
+      <CardBody>
+        <CardArt id="pokemonArt" src={sprites} />
+      </CardBody>
+      <CardFooter>
+        <p>Peso: {weight}</p>
+        <p>N°: {id}</p>
+        <p>Tipo: {types}</p>
+      </CardFooter>
+    </Container>
+  );
+};
