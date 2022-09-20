@@ -1,13 +1,14 @@
 import { Col, FormControl, Row } from "react-bootstrap";
 import { Card } from "../../components/Card";
 import { usePokemon } from "./hook/usePokemon";
-import { BuscaPokemon, CardContainer } from "./style";
+import { BuscaPokemon, CardContainer, Titulo } from "./style";
 
 export const BuscarPokemons = () => {
   const { pokemon, setBuscaPokemons } = usePokemon();
 
   return (
     <div>
+      <Titulo>Pokedex</Titulo>
       <CardContainer>
         <Row>
           {pokemon ? (

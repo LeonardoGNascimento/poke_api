@@ -125,8 +125,7 @@ table {
   border-spacing: 0;
 }
 
-.titulo {
-  font-family: "Pokemon Solid", sans-serif;
-  font-size: 100px;
-  color: #ffcc03;
+@font-face {
+  font-family: 'pokemon_solid';
+  src: url('./font/pokemon_solid.ttf');
 }
